@@ -64,10 +64,15 @@ body::before {
 
 /* Header Section */
 header {
-	display: flex; /* Use flexbox to align items horizontally */
-	align-items: center; /* Center items vertically */
-	gap: 20px; /* Add space between the image and text */
-	margin-bottom: 20px; /* Add some space below the header */
+	display: flex;
+	flex-direction: column; /* Stack items vertically */
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background-color: rgba(26, 26, 26, 0.8);
+	border-radius: 10px;
+	text-align: center;
+	max-width: 100%; /* Ensure header doesn't exceed screen width */
 }
 
 /* Profile Image */
@@ -78,11 +83,12 @@ header {
 	border: 3px solid #00ffaa;
 	box-shadow: 0 0 20px rgba(0, 255, 170, 0.8);
 	object-fit: cover; /* Ensures the image fits within the dimensions */
+	margin-bottom: 20px; /* Add space below the image */
 }
 
 /* Heading */
 h1 {
-	font-size: 2.5rem; /* Slightly smaller font size */
+	font-size: 2rem; /* Smaller font size */
 	color: #00ffaa; /* Neon green */
 	margin-bottom: 10px;
 	text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
@@ -101,7 +107,7 @@ h1 {
 
 /* Paragraph */
 p {
-	font-size: 1.2rem;
+	font-size: 1rem; /* Smaller font size */
 	color: #f0f0f0; /* Light text */
 	margin-bottom: 20px;
 }
@@ -318,6 +324,23 @@ a:hover {
 @media (max-width: 768px) {
 	.projects-contact-container {
 		flex-direction: column; /* Stack sections vertically */
+	}
+
+	header {
+		padding: 10px; /* Reduce padding */
+	}
+
+	.profile-image {
+		width: 80px; /* Smaller image on mobile */
+		height: 80px;
+	}
+
+	h1 {
+		font-size: 1.5rem; /* Smaller heading on mobile */
+	}
+
+	p {
+		font-size: 0.9rem; /* Smaller text on mobile */
 	}
 
 	.projects,
