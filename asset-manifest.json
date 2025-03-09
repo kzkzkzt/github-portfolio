@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kent-profile/static/css/main.74ea8933.css",
+    "main.js": "/kent-profile/static/js/main.2ddf1bcf.js",
+    "static/media/profile.png": "/kent-profile/static/media/profile.ba564faadf0a09b6a220.png",
+    "index.html": "/kent-profile/index.html",
+    "main.74ea8933.css.map": "/kent-profile/static/css/main.74ea8933.css.map",
+    "main.2ddf1bcf.js.map": "/kent-profile/static/js/main.2ddf1bcf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74ea8933.css",
+    "static/js/main.2ddf1bcf.js"
+  ]
+}
