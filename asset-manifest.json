@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kzkzkzt/github-portfolio/static/css/main.74ea8933.css",
-    "main.js": "/kzkzkzt/github-portfolio/static/js/main.8a428622.js",
-    "static/media/profile.png": "/kzkzkzt/github-portfolio/static/media/profile.ba564faadf0a09b6a220.png",
-    "index.html": "/kzkzkzt/github-portfolio/index.html",
-    "main.74ea8933.css.map": "/kzkzkzt/github-portfolio/static/css/main.74ea8933.css.map",
-    "main.8a428622.js.map": "/kzkzkzt/github-portfolio/static/js/main.8a428622.js.map"
+    "main.css": "/kzkzkzt/github-portfolio/kent-profile/static/css/main.74ea8933.css",
+    "main.js": "/kzkzkzt/github-portfolio/kent-profile/static/js/main.49623129.js",
+    "static/media/profile.png": "/kzkzkzt/github-portfolio/kent-profile/static/media/profile.ba564faadf0a09b6a220.png",
+    "index.html": "/kzkzkzt/github-portfolio/kent-profile/index.html",
+    "main.74ea8933.css.map": "/kzkzkzt/github-portfolio/kent-profile/static/css/main.74ea8933.css.map",
+    "main.49623129.js.map": "/kzkzkzt/github-portfolio/kent-profile/static/js/main.49623129.js.map"
   },
   "entrypoints": [
     "static/css/main.74ea8933.css",
-    "static/js/main.8a428622.js"
+    "static/js/main.49623129.js"
   ]
 }
