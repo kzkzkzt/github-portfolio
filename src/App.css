@@ -6,11 +6,39 @@ body {
 	background-size: 400% 400%;
 	animation: gradientBG 15s ease infinite;
 	color: #f0f0f0;
-	overflow-x: hidden; /* Prevent horizontal scrolling */
-	overflow-y: auto; /* Allow vertical scrolling */
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
 }
 
-/* Animated Background */
+/* Add glowing particles */
+body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 0.05) 10%,
+		transparent 10.01%
+	);
+	background-size: 20px 20px;
+	animation: particles 5s linear infinite;
+	z-index: -1;
+}
+
+@keyframes particles {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-20px);
+	}
+}
+
+/* Make gradient animation more dynamic */
 @keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;
@@ -122,9 +150,11 @@ a:hover {
 }
 
 .about h2 {
-	font-size: 2rem;
-	color: #00bfff; /* Neon blue */
-	margin-bottom: 10px;
+	font-size: 2.5rem;
+	color: #00ffaa; /* Neon green */
+	text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+	animation: glow 2s infinite alternate;
+	margin-bottom: 20px;
 }
 
 .about p {
@@ -148,9 +178,11 @@ a:hover {
 }
 
 .skills h2 {
-	font-size: 2rem;
-	color: #00bfff; /* Neon blue */
-	margin-bottom: 10px;
+	font-size: 2.5rem;
+	color: #00ffaa; /* Neon green */
+	text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+	animation: glow 2s infinite alternate;
+	margin-bottom: 20px;
 }
 
 .skills ul {
@@ -159,77 +191,137 @@ a:hover {
 }
 
 .skills li {
+	font-size: 1.1rem;
+	color: #f0f0f0;
+	margin-bottom: 15px;
+	padding-left: 20px;
+	position: relative;
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills li::before {
+	content: "▹";
+	position: absolute;
+	left: 0;
+	color: #00ffaa; /* Neon green */
+	font-size: 1.2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.skills li:hover {
+	transform: translateX(10px);
+	color: #00ffaa; /* Neon green on hover */
+}
+
+.skills ul ul {
+	margin-left: 20px;
+}
+
+.skills ul ul li {
 	font-size: 1rem;
-	color: #f0f0f0; /* Light text */
-	margin-bottom: 10px;
+	color: #ccc; /* Lighter text for sub-items */
 }
 
-/* Projects Section */
-.projects {
-	margin: 20px 0;
-	padding: 20px;
-	background-color: rgba(
-		26,
-		26,
-		26,
-		0.8
-	); /* Semi-transparent dark background */
-	border-radius: 10px;
-	max-width: 800px;
-	text-align: left;
-}
-
-.projects h2 {
-	font-size: 2rem;
+.skills ul ul li::before {
+	content: "•";
 	color: #00bfff; /* Neon blue */
-	margin-bottom: 10px;
 }
 
-.projects p {
-	font-size: 1rem;
-	color: #f0f0f0; /* Light text */
+/* Projects and Contact Sections - Inline Layout */
+.projects-contact-container {
+	display: flex;
+	gap: 20px; /* Space between the sections */
+	justify-content: center; /* Center the sections horizontally */
+	margin: 20px 0;
 }
 
-/* Contact Section */
+.projects,
 .contact {
-	margin: 20px 0;
+	flex: 1; /* Each section takes equal width */
+	max-width: 48%; /* Adjust width to fit side by side */
 	padding: 20px;
-	background-color: rgba(
-		26,
-		26,
-		26,
-		0.8
-	); /* Semi-transparent dark background */
+	background-color: rgba(26, 26, 26, 0.8);
 	border-radius: 10px;
-	max-width: 800px;
 	text-align: left;
+	border: 2px solid transparent;
+	box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+.projects:hover,
+.contact:hover {
+	border-color: #00ffaa; /* Neon green */
+	box-shadow: 0 0 20px rgba(0, 255, 170, 0.6);
+}
+
+.projects h2,
 .contact h2 {
-	font-size: 2rem;
-	color: #00bfff; /* Neon blue */
-	margin-bottom: 10px;
+	font-size: 2.5rem;
+	color: #00ffaa; /* Neon green */
+	text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+	animation: glow 2s infinite alternate;
+	margin-bottom: 20px;
 }
 
+.projects p,
 .contact p {
 	font-size: 1rem;
 	color: #f0f0f0; /* Light text */
 }
 
-.contact p span {
-	margin-right: 10px; /* Adjust spacing between text and button */
-	display: inline-block;
-}
-
+/* Contact Section - LinkedIn Button */
 .contact a.button {
-	background-color: #00bfff; /* Neon blue button */
-	color: #fff;
-	padding: 10px 20px;
-	border-radius: 5px;
-	text-decoration: none;
-	transition: background-color 0.3s ease;
+	display: block; /* Make the button take up its own line */
+	width: fit-content; /* Adjust width to fit the button content */
+	margin-top: 10px; /* Add some space above the button */
 }
 
-.contact a.button:hover {
-	background-color: #008c99; /* Darker shade of blue on hover */
+/* Typing Animation for Headings */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: #00ffaa; /* Neon green */
+	}
+}
+
+@keyframes hide-caret {
+	to {
+		border-color: transparent;
+	}
+}
+
+.skills h2,
+.about h2,
+.projects h2,
+.contact h2 {
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 3px solid #00ffaa; /* Neon green */
+	animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite,
+		hide-caret 0.1s ease 3s forwards; /* Hide caret after typing finishes */
+}
+
+/* Responsive Design: Stack sections vertically on smaller screens */
+@media (max-width: 768px) {
+	.projects-contact-container {
+		flex-direction: column; /* Stack sections vertically */
+	}
+
+	.projects,
+	.contact {
+		max-width: 100%; /* Full width on small screens */
+	}
 }

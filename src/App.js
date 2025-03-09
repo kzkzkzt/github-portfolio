@@ -12,8 +12,12 @@ function App() {
 			<Header />
 			<About />
 			<Skills />
-			<Projects />
-			<Contact />
+
+			{/* Wrapped Projects and Contact Me sections in a container div */}
+			<div className="projects-contact-container">
+				<Projects />
+				<Contact />
+			</div>
 		</div>
 	);
 }
