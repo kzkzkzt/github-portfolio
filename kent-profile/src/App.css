@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+	margin: 0;
+	font-family: "Arial", sans-serif;
+	background: linear-gradient(-45deg, #0a0a0a, #1a1a1a, #2a2a2a, #3a3a3a);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+	color: #f0f0f0;
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* App Container */
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Header Section */
+header {
+	display: flex; /* Use flexbox to align items horizontally */
+	align-items: center; /* Center items vertically */
+	gap: 20px; /* Add space between the image and text */
+	margin-bottom: 20px; /* Add some space below the header */
+}
+
+/* Profile Image */
+.profile-image {
+	width: 100px; /* Smaller size */
+	height: 100px; /* Smaller size */
+	border-radius: 50%; /* Makes the image circular */
+	border: 3px solid #00ffaa;
+	box-shadow: 0 0 20px rgba(0, 255, 170, 0.8);
+	object-fit: cover; /* Ensures the image fits within the dimensions */
+}
+
+/* Heading */
+h1 {
+	font-size: 2.5rem; /* Slightly smaller font size */
+	color: #00ffaa; /* Neon green */
+	margin-bottom: 10px;
+	text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+	animation: glow 2s infinite alternate;
+}
+
+/* Glow Animation for Heading */
+@keyframes glow {
+	0% {
+		text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa;
+	}
+	100% {
+		text-shadow: 0 0 20px #00ffaa, 0 0 40px #00ffaa;
+	}
+}
+
+/* Paragraph */
+p {
+	font-size: 1.2rem;
+	color: #f0f0f0; /* Light text */
+	margin-bottom: 20px;
+}
+
+/* Button Style */
+.button {
+	background-color: #00bfff; /* Neon blue */
+	color: #0a0a0a;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-right: 10px; /* Add spacing between buttons */
+}
+
+.button:hover {
+	background-color: #00ffaa; /* Neon green */
+}
+
+/* Links */
+a {
+	color: #00bfff; /* Neon blue */
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #00ffaa; /* Neon green */
+}
+
+/* About Section */
+.about {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: rgba(
+		26,
+		26,
+		26,
+		0.8
+	); /* Semi-transparent dark background */
+	border-radius: 10px;
+	max-width: 800px;
+	text-align: left;
+}
+
+.about h2 {
+	font-size: 2rem;
+	color: #00bfff; /* Neon blue */
+	margin-bottom: 10px;
+}
+
+.about p {
+	font-size: 1rem;
+	color: #f0f0f0; /* Light text */
+}
+
+/* Skills Section */
+.skills {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: rgba(
+		26,
+		26,
+		26,
+		0.8
+	); /* Semi-transparent dark background */
+	border-radius: 10px;
+	max-width: 800px;
+	text-align: left;
+}
+
+.skills h2 {
+	font-size: 2rem;
+	color: #00bfff; /* Neon blue */
+	margin-bottom: 10px;
+}
+
+.skills ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.skills li {
+	font-size: 1rem;
+	color: #f0f0f0; /* Light text */
+	margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: rgba(
+		26,
+		26,
+		26,
+		0.8
+	); /* Semi-transparent dark background */
+	border-radius: 10px;
+	max-width: 800px;
+	text-align: left;
+}
+
+.projects h2 {
+	font-size: 2rem;
+	color: #00bfff; /* Neon blue */
+	margin-bottom: 10px;
+}
+
+.projects p {
+	font-size: 1rem;
+	color: #f0f0f0; /* Light text */
+}
+
+/* Contact Section */
+.contact {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: rgba(
+		26,
+		26,
+		26,
+		0.8
+	); /* Semi-transparent dark background */
+	border-radius: 10px;
+	max-width: 800px;
+	text-align: left;
+}
+
+.contact h2 {
+	font-size: 2rem;
+	color: #00bfff; /* Neon blue */
+	margin-bottom: 10px;
+}
+
+.contact p {
+	font-size: 1rem;
+	color: #f0f0f0; /* Light text */
+}
+
+.contact p span {
+	margin-right: 10px; /* Adjust spacing between text and button */
+	display: inline-block;
+}
+
+.contact a.button {
+	background-color: #00bfff; /* Neon blue button */
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.contact a.button:hover {
+	background-color: #008c99; /* Darker shade of blue on hover */
+}
