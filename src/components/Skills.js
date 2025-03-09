@@ -1,4 +1,5 @@
 import React from "react";
+import { FaShieldAlt, FaCode, FaCloud, FaDatabase } from "react-icons/fa";
 
 const Skills = () => {
 	return (
@@ -6,7 +7,9 @@ const Skills = () => {
 			<h2>Skills</h2>
 			<ul>
 				<li>
-					<strong>Cybersecurity & Ethical Hacking</strong>
+					<strong>
+						<FaShieldAlt /> Cybersecurity & Ethical Hacking
+					</strong>
 				</li>
 				<ul>
 					<li>
@@ -22,7 +25,9 @@ const Skills = () => {
 				</ul>
 
 				<li>
-					<strong>Software Development</strong>
+					<strong>
+						<FaCode /> Software Development
+					</strong>
 				</li>
 				<ul>
 					<li>Front-End: HTML5, CSS3, JavaScript, React</li>
@@ -32,7 +37,9 @@ const Skills = () => {
 				</ul>
 
 				<li>
-					<strong>Cloud & DevOps</strong>
+					<strong>
+						<FaCloud /> Cloud & DevOps
+					</strong>
 				</li>
 				<ul>
 					<li>Cloud Platforms & Infrastructure: AWS, Azure</li>
@@ -40,7 +47,9 @@ const Skills = () => {
 				</ul>
 
 				<li>
-					<strong>Databases</strong>
+					<strong>
+						<FaDatabase /> Databases
+					</strong>
 				</li>
 				<ul>
 					<li>SQL Databases: PostgreSQL, MySQL</li>
