@@ -6,7 +6,7 @@ const Contact = () => {
 			<h2>Contact Me</h2>
 			<p>
 				Feel free to reach out to me at{" "}
-				<a href="mailto:your-email@example.com">kenthtupaz@gmail.com</a>.
+				<a href="mailto:kenthtupaz@gmail.com">kenthtupaz@gmail.com</a>.
 			</p>
 			<p>
 				<span>Connect with me on LinkedIn: </span>
