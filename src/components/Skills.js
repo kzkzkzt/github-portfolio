@@ -1,5 +1,13 @@
 import React from "react";
-import { FaShieldAlt, FaCode, FaCloud, FaDatabase } from "react-icons/fa";
+import {
+	FaShieldAlt,
+	FaCode,
+	FaCloud,
+	FaDatabase,
+	FaCogs,
+	FaUserCheck,
+	FaTools,
+} from "react-icons/fa";
 
 const Skills = () => {
 	return (
@@ -8,51 +16,89 @@ const Skills = () => {
 			<ul>
 				<li>
 					<strong>
-						<FaShieldAlt /> Cybersecurity & Ethical Hacking
+						<FaShieldAlt /> Cybersikkerhet og Etisk Hacking
 					</strong>
 				</li>
 				<ul>
 					<li>
-						Penetration Testing & Red Teaming: Metasploit, Burp Suite, OWASP
+						Penetrasjonstesting og Red Teaming: Metasploit, Burp Suite, OWASP
 						ZAP, Reverse Engineering
 					</li>
-					<li>Network Security & Analysis: Nmap, Wireshark, Nessus</li>
+					<li>Nettverkssikkerhet og Analyse: Nmap, Wireshark, Nessus</li>
 					<li>
-						Password Cracking & Exploitation: Hashcat, John the Ripper, Hydra
+						Passordkracking og Utnyttelse: Hashcat, John the Ripper, Hydra
 					</li>
-					<li>SIEM & Threat Detection: Splunk</li>
+					<li>SIEM og Trusseloppdagelse: Splunk</li>
 					<li>Offensive Security OS: Kali Linux</li>
 				</ul>
 
 				<li>
 					<strong>
-						<FaCode /> Software Development
+						<FaCode /> Programmering og Programvareutvikling
 					</strong>
 				</li>
 				<ul>
 					<li>Front-End: HTML5, CSS3, JavaScript, React</li>
-					<li>Back-End: Java, NodeJS, Python</li>
-					<li>Version Control & Collaboration: Git</li>
-					<li>UI/UX & Visualization: Figma, Miro, Tableau, Excel</li>
+					<li>Back-End: Java, Node.js, Python</li>
+					<li>Versjonskontroll og Samarbeid: Git</li>
+					<li>UI/UX og Visualisering: Figma, Miro, Tableau, Excel</li>
 				</ul>
 
 				<li>
 					<strong>
-						<FaCloud /> Cloud & DevOps
+						<FaCloud /> Sky og DevOps
 					</strong>
 				</li>
 				<ul>
-					<li>Cloud Platforms & Infrastructure: AWS, Azure</li>
-					<li>Infrastructure as Code: Terraform</li>
+					<li>Skyløsninger: AWS, Azure</li>
+					<li>Infrastruktur som Kode (IaC): Terraform</li>
 				</ul>
 
 				<li>
 					<strong>
-						<FaDatabase /> Databases
+						<FaDatabase /> Databaser
 					</strong>
 				</li>
 				<ul>
-					<li>SQL Databases: PostgreSQL, MySQL</li>
+					<li>SQL-databaser: PostgreSQL, MySQL</li>
+				</ul>
+
+				<li>
+					<strong>
+						<FaCogs /> Sikkerhetsstandarder og Rammer
+					</strong>
+				</li>
+				<ul>
+					<li>
+						NIST 27001, NIST CSF, CIA-triaden (Confidentiality, Integrity,
+						Availability)
+					</li>
+					<li>
+						GRC (Governance, Risk, Compliance), ISMS
+						(Informasjonssikkerhetsledelsessystemer)
+					</li>
+				</ul>
+
+				<li>
+					<strong>
+						<FaTools /> Systemvedlikehold og Infrastruktur
+					</strong>
+				</li>
+				<ul>
+					<li>Systemvedlikehold, Cyber Defense, Informasjonsteknologi</li>
+					<li>Algoritmer og Datastrukturer</li>
+				</ul>
+
+				<li>
+					<strong>
+						<FaUserCheck /> Personlige Ferdigheter
+					</strong>
+				</li>
+				<ul>
+					<li>
+						Problemløsning, Teamarbeid, Kommunikasjon, Kundebehandling,
+						Personlig effektivitet
+					</li>
 				</ul>
 			</ul>
 		</section>
