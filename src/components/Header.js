@@ -19,11 +19,6 @@ const Header = () => {
 				<img src={profile} alt="Kent Tupaz" className="profile-image" />
 			)}
 
-			{/* Navbar profile image (only visible when not on home page) */}
-			{!isHome && (
-				<img src={profile} alt="Kent Tupaz" className="navbar-profile-image" />
-			)}
-
 			{isHome && (
 				<p className="header-text">
 					Hi, I'm Kent Tupaz. I'm passionate about cybersecurity and coding.

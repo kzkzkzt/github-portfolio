@@ -24,23 +24,6 @@
 	margin: 20px auto;
 	max-width: 800px;
 }
-.navbar-profile-image {
-	width: 40px; /* Adjust size */
-	height: 40px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-left: 10px; /* Add space from navbar items */
-}
-
-.profile-image {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	border: 3px solid #00ffaa;
-	box-shadow: 0 0 20px rgba(0, 255, 170, 0.8);
-	object-fit: cover;
-	margin-bottom: 20px;
-}
 
 .about-header h2 {
 	font-size: 2.5rem;
