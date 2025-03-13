@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -8,17 +9,22 @@ import Contact from "./components/Contact";
 
 function App() {
 	return (
-		<div className="app">
-			<Header />
-			<About />
-			<Skills />
+		<Router>
+			<div className="app">
+				{/* Render Header once at the start */}
+				<Header />
 
-			{/* Wrapped Projects and Contact Me sections in a container div */}
-			<div className="projects-contact-container">
-				<Projects />
-				<Contact />
+				{/* Routes for other sections */}
+				<Routes>
+					<Route path="/about" element={<About />} />
+					<Route path="/skills" element={<Skills />} />
+					<Route path="/projects" element={<Projects />} />
+					<Route path="/contact" element={<Contact />} />
+					{/* Home route doesn't show any content, only renders the Header */}
+					<Route path="/" element={null} /> {/* Empty route for home */}
+				</Routes>
 			</div>
-		</div>
+		</Router>
 	);
 }
 
