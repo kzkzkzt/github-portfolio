@@ -42,6 +42,18 @@ a.button {
 	cursor: pointer;
 }
 
+/* Add to your globals.css or relevant CSS file */
+.intro-animation {
+	opacity: 0;
+	transform: translateY(30px); /* Start with the element off-screen */
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.intro-animation.visible {
+	opacity: 1; /* Fade in the element */
+	transform: translateY(0); /* Slide into place */
+}
+
 /* Add hover effect for the email link */
 .contact-link:hover {
 	color: #ffffff; /* Change text color to white */

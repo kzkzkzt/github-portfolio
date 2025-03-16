@@ -6,22 +6,20 @@ export const homeStyles = {
 		justifyContent: "center",
 		height: "100vh",
 		textAlign: "center",
-		color: "#f0f0f0" /* Light text color */,
-		paddingTop: "80px" /* Adjust for fixed navbar */,
-		padding: "0 20px" /* Padding for smaller screens */,
+		color: "#f0f0f0", // Light text color
+		paddingTop: "80px", // Adjust for fixed navbar
+		padding: "0 20px", // Padding for smaller screens
 	},
 	homeHeading: {
 		fontSize: "3rem",
-		color: "#00ffaa" /* Neon green */,
-		textShadow:
-			"0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 30px #00ffaa" /* Glowing */,
-		animation:
-			"glow 1.5s ease-in-out infinite alternate" /* Glowing animation */,
+		color: "#00ffaa", // Neon green
+		textShadow: "0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 30px #00ffaa", // Glowing
+		animation: "glow 1.5s ease-in-out infinite alternate", // Glowing animation
 		marginBottom: "20px",
 	},
 	homeText: {
 		fontSize: "1.5rem",
-		color: "#f0f0f0" /* Light text */,
+		color: "#f0f0f0", // Light text
 		marginBottom: "20px",
 	},
 	homeImage: {
@@ -30,6 +28,19 @@ export const homeStyles = {
 		borderRadius: "50%",
 		objectFit: "cover",
 		marginBottom: "20px",
+	},
+};
+
+// CSS animations for intro animation
+export const introAnimation = {
+	".intro-animation": {
+		opacity: 0,
+		transform: "translateY(30px)", // Start with the element off-screen
+		transition: "opacity 0.8s ease-out, transform 0.8s ease-out", // Smooth transition
+	},
+	".intro-animation.visible": {
+		opacity: 1, // Fade in the element
+		transform: "translateY(0)", // Slide into place
 	},
 };
 
