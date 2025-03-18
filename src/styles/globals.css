@@ -18,6 +18,7 @@ body {
 	justify-content: center;
 	height: 100vh;
 	position: relative; /* Positioning for the overlay */
+	overflow: hidden;
 }
 
 body::before {
@@ -42,7 +43,46 @@ a.button {
 	cursor: pointer;
 }
 
-/* Add to your globals.css or relevant CSS file */
+/* Prevent text overflow and ensure wrapping */
+.project-card {
+	width: 100%; /* Ensure cards take full width */
+	padding: 20px;
+	box-sizing: border-box; /* Ensure padding is within the card width */
+	word-wrap: break-word; /* Ensure text wraps inside the card */
+	overflow-wrap: break-word; /* Break words when too long to fit in container */
+}
+
+/* Ensure the text inside the card fits properly */
+.project-info {
+	word-wrap: break-word; /* Ensure long text wraps within the card */
+	overflow: hidden; /* Hide overflowed text */
+	max-height: 500px; /* Prevent text from spilling out */
+}
+
+/* Ensure the title and text doesn't overflow */
+.project-info h3,
+.project-info p {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* For mobile screens, make sure the content is responsive */
+@media (max-width: 768px) {
+	.project-card {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.project-info {
+		padding: 10px;
+	}
+
+	.project-info h3,
+	.project-info p {
+		font-size: 1.1rem; /* Adjust text size for mobile */
+	}
+}
+
 .intro-animation {
 	opacity: 0;
 	transform: translateY(30px); /* Start with the element off-screen */
