@@ -5,7 +5,6 @@ import Button from "./Button"; // Import the reusable Button component
 
 const Home = () => {
 	useEffect(() => {
-		// This will trigger the fade-in animation when the component mounts
 		const elements = document.querySelectorAll(".intro-animation");
 		elements.forEach((el, index) => {
 			setTimeout(() => {
