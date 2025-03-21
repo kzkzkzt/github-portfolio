@@ -41,7 +41,7 @@ const Projects = () => {
 					<p>
 						<Button
 							text="View App"
-							link="https://kzkzkzt.github.io/Password-Strength-Checker/"
+							link="kzkzkzt.github.io/Password-Strength-Checker/"
 						/>
 					</p>
 				</div>
