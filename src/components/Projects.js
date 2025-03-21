@@ -24,12 +24,14 @@ const Projects = () => {
 					<p>
 						A simple yet powerful tool to evaluate password strength in
 						real-time. It provides instant feedback on password security based
-						on length, complexity, and character variety.
+						on length, complexity, and character variety. This tool is purely
+						static and does not store any user data. All password checks are
+						performed locally, and no information is stored or transmitted.
 					</p>
 					<p>
 						<Button
-							text="View on GitHub"
-							link="https://github.com/kzkzkzt/password-strength-checker"
+							text="View App"
+							link="https://https://kzkzkzt.github.io/Password-Strength-Checker/"
 						/>
 					</p>
 				</div>
