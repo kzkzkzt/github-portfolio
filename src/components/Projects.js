@@ -24,9 +24,19 @@ const Projects = () => {
 					<p>
 						A simple yet powerful tool to evaluate password strength in
 						real-time. It provides instant feedback on password security based
-						on length, complexity, and character variety. This tool is purely
-						static and does not store any user data. All password checks are
-						performed locally, and no information is stored or transmitted.
+						on length, complexity, and character variety.
+					</p>
+					<p>
+						<strong>How it works:</strong> It uses the{" "}
+						<strong>Have I Been Pwned (HIBP)</strong> API to check if your
+						password has been part of any known data breaches. The service
+						compares hashed portions of your password against a large database
+						of compromised passwords, ensuring privacy and security.
+					</p>
+					<p>
+						<strong>Database:</strong> The password check is powered by HIBP’s
+						database of breached passwords, using a secure hash comparison
+						method.
 					</p>
 					<p>
 						<Button
