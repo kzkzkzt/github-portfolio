@@ -31,7 +31,8 @@ const Projects = () => {
 						<strong>Have I Been Pwned (HIBP)</strong> API to check if your
 						password has been part of any known data breaches. The service
 						compares hashed portions of your password against a large database
-						of compromised passwords, ensuring privacy and security.
+						of compromised passwords, ensuring privacy and security. This app is
+						static and does not store any user data or passwords.
 					</p>
 					<p>
 						<strong>Database:</strong> The password check is powered by HIBP’s
